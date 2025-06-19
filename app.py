@@ -1,9 +1,6 @@
 from flask import Flask, render_template, request
 import os
 import matplotlib.pyplot as plt
-from keras.applications.mobilenet_v2 import MobileNetV2
-import requests
-model = MobileNetV2(weights='imagenet',include_top=False, input_shape=(224, 224, 3))  
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads'
 if not os.path.exists(UPLOAD_FOLDER):
