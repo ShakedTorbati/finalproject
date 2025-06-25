@@ -3,16 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Page Title</title>
-  <script defer src="../header.js"></script>
-  <link rel="stylesheet" href="../css.css">
-  <script src="../javascript.js"></script>
+  <title>Ai page</title>
 </head>
 <body>
-  <div id="header"></div>
+  <div id="header">
+    <div align="left" id="topbuttons">
+      <button class="buttons" id="homebutton" type="button" onclick="gotohomepage()">home</button>
+      <button class="buttons" id="aibutton" type="button" onclick="gotoai()">ai check</button>
+    </div>
+  </div>
   <form action="/result" method="post" enctype="multipart/form-data">
       <input type="file" name="image">
-      <input type="submit" value="send">
+      <input type="submit" value="send" id="send">
   </form>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e7f4ea;
+    color: #204e2c;
+  }
+
+  #header {
+    background-color: #a3c9a8;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    box-shadow: 0 2px 8px rgba(32, 78, 44, 0.2);
+  }
+
+  #topbuttons {
+    display: flex;
+    gap: 12px;
+    transform: translateY(-8px);
+  }
+
+  #homebutton,
+  #aibutton {
+    width: 110px;
+    height: 42px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #6b9b78;
+    color: white;
+    border: none;
+    border-radius: 50% 20% 50% 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+  }
+
+  #homebutton:hover,
+  #aibutton:hover {
+    background-color: #5a8a68;
+    transform: translateY(-2px);
+  }
+
+  form {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  input[type="file"] {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    border: 2px dashed #6b9b78;
+    border-radius: 10px;
+    background-color: #f5fff8;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  input[type="file"]:hover {
+    background-color: #e8f8ee;
+  }
+
+  input[type="submit"] {
+    background-color: #6b9b78;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #5a8a68;
+  }
+</style>
+<script>
+  function gotoai() {
+    window.location.href = "/";
+  }
+
+  function gotohomepage() {
+    window.location.href = "/homepage";
+  }
+</script>
 </body>
 </html>

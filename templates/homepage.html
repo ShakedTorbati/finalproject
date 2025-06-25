@@ -2,17 +2,72 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
-    <!-- <script defer src="../header.js"></script> -->
+    <title>Homepage</title>
     <link rel="stylesheet" href="../css.css">
     <script src="../javascript.js"></script>
 </head>
 <body>
+<div class="leaves-container">
+  <div class="leaf"></div>
+  <div class="leaf"></div>
+  <div class="leaf"></div>
+  <div class="leaf"></div>
+  <div class="leaf"></div>
+</div>
+
 <div id="header">
         <div align="left" id="topbuttons">
         <button class="buttons" id="homebutton" type="submit" onclick="gotohomepage()">home</button>
         <button class="buttons" id="aibutton" type="submit" onclick="gotoai()">ai check</button>
     </div>
 </div>
+<style>body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e7f4ea;
+    color: #204e2c;
+}
+
+#header {
+    background-color: #a3c9a8;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    box-shadow: 0 2px 8px rgba(32, 78, 44, 0.2);
+}
+
+#topbuttons {
+    display: flex;
+    gap: 12px;
+    transform: translateY(-8px);
+}
+
+#homebutton,
+#aibutton {
+    width: 110px;
+    height: 42px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #6b9b78;
+    color: white;
+    border: none;
+    border-radius: 50% 20% 50% 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+}
+
+#homebutton:hover,
+#aibutton:hover {
+    background-color: #5a8a68;
+    transform: translateY(-2px);
+}</style>
+<script>function gotoai() {
+    window.location.href = "index.html";
+}
+
+function gotohome() {
+    window.location.href = "homepage.html";
+}</script>
 </body>
 </html>
